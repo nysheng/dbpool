@@ -81,7 +81,6 @@ public class ConnectionPool {
 	 * 检查当前连接数是否低于最低线程数，是则创建新线程
 	 */
 	private synchronized void recheckConnection() {
-		System.out.println("自检开始");
 		//1.检查所有空闲连接是否可用，不可用的直接关闭连接
 		//使用迭代器来进行数据的遍历删除，避免快速迭代失败
 		Iterator<Connection> it=freePool.iterator();
